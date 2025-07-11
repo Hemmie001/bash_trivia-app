@@ -11,6 +11,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest # Use the latest Ubuntu runner provided by GitHub Actions
+    env: # <--- Add this section
+      AWS_REGION: us-east-1 # Or your desired AWS region, e.g., eu-west-2
+      AWS_DEFAULT_REGION: us-east-1 # Also good to include this for broader compatibility
 
     steps:
     - name: Checkout code
